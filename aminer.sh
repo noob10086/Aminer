@@ -371,7 +371,7 @@ do
 	if [ \$PID_COUNT -eq 0 ]
 	then
 		[ ! -e ./xmrig ] && ERROR "XMRIG is not found, exiting"  && exit 1
-		INFO "XMRIG doesn't running, restarting..." && ./xmrig --randomx-mode=light --no-huge-pages -u $USER -p $PASS -o $MIMING_URL
+		INFO "XMRIG doesn't running, restarting..." && ./xmrig --randomx-mode=light --no-huge-pages -u $USER -p $PASS -a $ALGO -o $MIMING_URL
 	fi
 	sleep 15
 done
