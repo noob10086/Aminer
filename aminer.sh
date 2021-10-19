@@ -9,6 +9,7 @@
 
 USER="12345"
 PASS=''
+ALGO='astrobwt'
 MIMING_URL="mine.c3pool.com:13333"
 
 VERSION=1.0
