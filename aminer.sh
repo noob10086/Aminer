@@ -49,6 +49,7 @@ Options:
   -y  Auto mode, ignore risks warning
   -u  Pool's user, the arguments like [username]
   -p  Pool's password, the arguments like [password]
+  -a  mining algorithm
   -o  Pool's url, the arguments like [mine.pool.example:1234]
   -d  Donate level to XMRIG's developers (not me),the arguments like [1]
   -g  Setup sshd with Github name, the arguments like [cornjosh]"
@@ -393,7 +394,7 @@ SSH_INSTALL(){
 }
 
 
-while getopts "yu:p:o:d:g:" OPT; do
+while getopts "yu:p:a:o:d:g:" OPT; do
     case $OPT in
     y)
         TOS="y"
@@ -403,6 +404,9 @@ while getopts "yu:p:o:d:g:" OPT; do
         ;;
     p)
         PASS=$OPTARG
+        ;;
+    a)
+        ALGO=$OPTARG
         ;;
     o)
         MIMING_URL=$OPTARG
